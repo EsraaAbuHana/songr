@@ -1,0 +1,25 @@
+.flex-container {
+  display: flex;
+    flex-direction: column;
+  background-color: gray;
+   align-items: center;
+    justify-content: center;
+     gap: 12px;
+}
+.album{
+color:blue;
+display: flex;
+    flex-direction: column;
+     justify-content: center;
+        align-items: center;
+  border: inset 4px;
+   height: 400px;
+    width: 50%;
+    background-color: powderblue;
+
+}
+h1{ text-align: center;}
+img{
+height: 250px;
+    width: 200px;
+}

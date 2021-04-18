@@ -8,9 +8,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 class SongrApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
 @Test
 	void AlbumTest(){
 	Album testAlbum = new Album("SKY","Yiruma",8,500,"https://img.discogs.com/DgLWcqi0mMWsayw856ptriTN9qc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6875064-1428500220-1592.jpeg.jpg");
@@ -22,23 +19,21 @@ class SongrApplicationTests {
 
 }
 @Test
-	void setterAlbumsTest(){
-		final Album album = new Album();
-	final Album album1 = new Album();
+	void setterAndGettersAlbumsTest(){
+ Album album = new Album("aa","bb",5,100,"https://img.discogs.com");
+
 	album.setArtist("person");
-	final Album field = album.getClass().getDeclaredField("value");
-        field.setAccessible(true);
-	assertEquals("Fields didn't match", field.get(album), "person");
+	album.setSongCount(10);
+	album.setImageUrl("https://img.discogs.com");
+	album.setTitle("any");
+	album.setLength(200);
+	assertThat(album.getArtist()).isEqualTo("person");
+	assertThat(album.getTitle()).isEqualTo("any");
+	assertThat(album.getLength()).isEqualTo(200);
+	assertThat(album.getImageUrl()).isEqualTo("https://img.discogs.com");
+	assertThat(album.getSongCount()).isEqualTo(10);
+
 
 }
 
-//	final PlainOldJavaObject pojo = new PlainOldJavaObject();
-//
-//	//when
-//        pojo.setValue("foo");
-//
-//	//then
-//	final Field field = pojo.getClass().getDeclaredField("value");
-//        field.setAccessible(true);
-//	assertEquals("Fields didn't match", field.get(pojo), "foo");
 }

@@ -27,9 +27,8 @@ public class SongrController {
     public String getAlbum(Model m){
 
         Album album1 = new Album("SKY","Yiruma",8,500,"https://img.discogs.com/DgLWcqi0mMWsayw856ptriTN9qc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6875064-1428500220-1592.jpeg.jpg");
-        Album album2 = new Album("SKY","Yiruma",8,500,"https://img.discogs.com/DgLWcqi0mMWsayw856ptriTN9qc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6875064-1428500220-1592.jpeg.jpg");
-        Album album3 = new Album("SKY","Yiruma",8,500,"https://img.discogs.com/DgLWcqi0mMWsayw856ptriTN9qc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6875064-1428500220-1592.jpeg.jpg");
-
+        Album album2 = new Album("Piano Serenade","Yiruma",10,320,"https://m.media-amazon.com/images/I/81fkNX0f3tL._SS500_.jpg");
+        Album album3 = new Album("ATMOSFERA","Yiruma",1,120,"https://a10.gaanacdn.com/images/albums/7/225107/crop_175x175_225107.jpg");
         List<Album> albums = new ArrayList<>();
         albums.add(album1);
         albums.add(album2);
