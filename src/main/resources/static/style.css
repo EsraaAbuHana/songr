@@ -13,13 +13,13 @@ display: flex;
      justify-content: center;
         align-items: center;
   border: inset 4px;
-   height: 400px;
+   height: 450px;
     width: 50%;
     background-color: powderblue;
 
 }
 h1{ text-align: center;}
 img{
-height: 250px;
-    width: 200px;
+height: 200px;
+    width: 170px;
 }
