@@ -14,6 +14,7 @@ import java.util.Locale;
 public class SongrController {
     @Autowired
     AlbumRepository albumRepository;
+
     @GetMapping("/hello")
 //    @ResponseBody
     public String home() {
@@ -24,6 +25,11 @@ public class SongrController {
         m.addAttribute("word",word.toUpperCase());
 
         return "CAPITALIZED.html";
+    }
+    @GetMapping("/home")
+//    @ResponseBody
+    public String index() {
+        return "index.html";
     }
 
     @GetMapping("/albums")
@@ -48,6 +54,18 @@ m.addAttribute("albums",albumRepository.findAll());
 
     }
 
+//    @GetMapping("/majors/{id}")
+//    public ResponseEntity<Album> getStudentById(@PathVariable(value="id") Integer id){
+//        Album album = majorRepository.findById(id).get();
+//        return new ResponseEntity(album, HttpStatus.OK);
+//    }
+//
+//    @PostMapping("/majors")
+//    public ResponseEntity<Album> addStudent(String majorCode, String majorName){
+//        Album newMajor = new Album(albumCode,majorName);
+//        albumRepository.save(newMajor);
+//        return new ResponseEntity(newMajor, HttpStatus.OK);
+//    }
 
 }
 //        Album album1 = new Album("SKY","Yiruma",8,500,"https://img.discogs.com/DgLWcqi0mMWsayw856ptriTN9qc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6875064-1428500220-1592.jpeg.jpg");
