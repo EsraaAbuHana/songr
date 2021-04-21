@@ -1,9 +1,7 @@
 package com.songr.songr;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -15,6 +13,10 @@ public class Album {
     int songCount;
     int length;
     String imageUrl;//that is a link to that album’s art.
+//    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
+//    private List<Album> albums;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "album")
+    List<Song> songs;
 public Album(){
 
 }
@@ -67,5 +69,15 @@ public Album(){
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
     }
 }

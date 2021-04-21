@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>Welcome to the Songs page!</h1>
+<div class="flex-container">
+    <div class="album" th:each="song : ${songs}">
+        <p>Song ID: <span th:text=${song.id}></span> </p>
+        <p>Song Title: <span th:text=${song.title}></span> </p>
+        <p>Track Number: <span th:text=${song.trackNumber}></span> </p>
+        <p>Song Length: <span th:text=${song.length}></span> </p>
+<!--        <p>Album: <span th:text=${song.album}></span> </p>-->
+
+    </div>
+</div>
+<!--String title, int length, int trackNumber, Album album-->
+</body>
+</html>
